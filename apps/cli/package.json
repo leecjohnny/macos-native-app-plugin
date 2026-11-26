@@ -1,0 +1,17 @@
+{
+  "name": "@macos-native-app/cli",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "macos-native-app": "src/cli.ts"
+  },
+  "exports": {
+    ".": "./src/cli.ts",
+    "./*": "./src/*.ts"
+  },
+  "dependencies": {
+    "@macos-native-app/core": "workspace:*",
+    "@macos-native-app/mail": "workspace:*",
+    "@macos-native-app/photos": "workspace:*"
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "@macos-native-app/mail",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/plugin.ts",
+    "./*": "./src/*.ts"
+  },
+  "dependencies": {
+    "@earendil-works/pi-schema": "^1.6.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@macos-native-app/core": "workspace:*",
+    "postal-mime": "^4.2.1",
+    "turndown": "^7.2.5",
+    "@duckdb/node-api": "^2.0.1-r.1"
+  },
+  "devDependencies": {
+    "@macos-native-app/testing": "workspace:*"
+  }
+}

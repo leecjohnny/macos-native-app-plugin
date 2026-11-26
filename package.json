@@ -1,0 +1,37 @@
+{
+  "name": "macos-native-app-plugin",
+  "private": true,
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "macos-native-app": "apps/cli/src/cli.ts"
+  },
+  "scripts": {
+    "fmt": "bun fmt --check --no-script .",
+    "lint": "oxlint --deny-warnings",
+    "lint:osa": "bun packages/toolkit/src/lint-osa.ts packages plugins apps",
+    "check": "bun check --no-script",
+    "test": "bun test --parallel",
+    "verify": "bun run --parallel fmt lint lint:osa lint:swift check test",
+    "lint:swift": "bun packages/toolkit/src/lint-swift.ts packages plugins apps",
+    "build:helpers": "bun packages/toolkit/src/build-swift.ts"
+  },
+  "dependencies": {
+    "@duckdb/node-api": "^2.0.1-r.1",
+    "@earendil-works/pi-schema": "^1.6.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "postal-mime": "^4.2.1",
+    "turndown": "^7.2.5"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.4.5",
+    "@types/turndown": "^5.0.6",
+    "fast-check": "^4.10.3",
+    "oxlint": "^1.94.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "plugins/*",
+    "apps/*"
+  ]
+}

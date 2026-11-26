@@ -1,0 +1,7 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "jsPlugins": ["./packages/toolkit/src/no-comments.ts"],
+  "categories": { "correctness": "error", "suspicious": "error" },
+  "rules": { "repo/no-comments": "error" },
+  "ignorePatterns": ["node_modules"]
+}

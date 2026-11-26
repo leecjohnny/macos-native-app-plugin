@@ -1,0 +1,16 @@
+{
+  "name": "@macos-native-app/testing",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@duckdb/node-api": "^2.0.1-r.1",
+    "@macos-native-app/core": "workspace:*",
+    "@macos-native-app/toolkit": "workspace:*",
+    "fast-check": "^4.10.3"
+  }
+}

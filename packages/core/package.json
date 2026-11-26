@@ -1,0 +1,14 @@
+{
+  "name": "@macos-native-app/core",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.ts",
+    "./*": "./src/*.ts"
+  },
+  "dependencies": {
+    "@earendil-works/pi-schema": "^1.6.0",
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "@duckdb/node-api": "^2.0.1-r.1"
+  }
+}
